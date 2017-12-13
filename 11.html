@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src = "jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <h1>Head1</h1>
+    <h2>Head2</h2>
+    <h3>Head3</h3>
+    <h4>Head4</h4>
+    <div id = "div1"><p>Paragraph1</p></div>
+    <div id = "div2"><p>Paragraph1</p></div>
+    <div id = "div3"><p>Paragraph1</p></div>
+    <div id = "div4"><p>Paragraph1</p></div>
+    <a href="google.com">google</a>
+    <a href="recordfm.com.ua">recordfm</a>
+    <a href="vk.com">vk</a>
+    <a href="facebook.соm">facebook</a>
+        <button onclick="Start()" value = 'Start' style="width: 100px; height: 100px" id="but1">Start</button>
+        <button onclick="Stop(begin)" style="width: 100px; height: 100px" id="but2">Stop</button>
+         <script>
+            var begin = 0; 
+            var finish = 0;
+            var Start = function(){
+                var d = new Date();
+                return begin = d.getTime();
+            }
+            var Stop = function(begin){
+                this.begin = begin;
+                var d = new Date();
+                finish = d.getTime();
+                result = (finish - begin)/1000;
+                a = document.getElementById("div1");
+                a.innerHTML = result;
+                
+            }
+            
+             
+            
+           
+        </script>
+          
+</body>
+</html>
